@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/png" />
+  <meta name="theme-color" content="#6e57e0" />
+  <title id="pageTitle"></title>
+
+
+  <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+  <link rel="stylesheet" href="https://assets.invytale.in/invytale-assets/embrald-bliss/css/style.css" />
+
+
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;display=swap" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <!--=============== sakura falling ===============-->
+  <div class="sakura-falling"></div>
+  <div class="wrap" style="width: 100%">
+    <img src="./assets/template-assets/flower.png" alt="bg"
+      class="position-absolute top-0 start-50 translate-middle-x img-fluid home_txt"
+      style="width: 250px; height: 50px" />
+    <img src="./assets/template-assets/flower-with-light-left.png" alt="bg"
+      class="position-absolute bottom-0 start-0 img-fluid home__left" style="width: 100px; height: 400px" />
+    <img src="./assets/template-assets/flower-with-light-right.png" alt="bg"
+      class="position-absolute bottom-0 end-0 img-fluid home__bottom" style="width: 100px; height: 400px" />
+
+    <div style="width: 100%;margin-top: 40px;">
+      <div>
+        <div class="position-relative p-2">
+          <div class="text-center" style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              ">
+            <h1 class="font-esthetic my-4 fw-medium home_txt" style="font-size: 1.5rem; width: 232px">
+              A double celebration in our family!
+            </h1>
+          </div>
+
+          <h2 class="font-esthetic rahul" style="font-size: 2.5rem" id="groomName"></h2>
+          <h2 class="font-esthetic home_txt" style="font-size: 2.5rem">&amp;</h2>
+          <h2 class="font-esthetic pranjal" style="font-size: 2.5rem" id="brideName"></h2>
+          <img src="./assets/template-assets/couple.png" alt="bg" style="width: 200px; height: 200px" class="home_txt" />
+          <p class="my-2 home_txt" style="font-size: 1.25rem" id="weddingDateTop">
+          </p>
+
+          <a class="btn btn-outline-light btn-sm shadow rounded-pill px-3 home_txt text-decoration-none" target="_blank"
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE
+&text=Engagement+of+Mohanraj+%26+Oviya
+&details=Engagement+Ceremony+of+Mohanraj+and+Oviya%0A%0ADate%3A+Sunday%2C+22+February+2026%0ATime%3A+2%3A00+PM+-+3%3A00+PM+IST%0AVenue%3A+RAB+Marriage+Hall%2C+Avalurpet%0AAddress%3A+4a%2C+Chetpet+Rd%2C+Avalurpet%2C+Tamil+Nadu+604201
+&dates=20260222T083000Z/20260222T093000Z
+&location=https://maps.app.goo.gl/PkgonZJZ1LLnyoQG8
+">
+            <i class="fa-solid fa-calendar-check me-2"></i>Save The Date
+          </a>
+          <br>
+          <div class="scroll-section home_txt" style="margin-top: 10px;">
+            <a href="#sec-2">
+              <div class="scroll-down"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-image" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <img id="show-modal-image" style="border-radius: 5px" src="" alt="Preview" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+
+  <section class="text-center px-2 brideAndGroomSection" id="bride">
+    <div class="header-bg text-center">
+      <h2 class="font-esthetic py-2 home_txt uk-heading-line mt-5" style="font-size: 2rem">
+        Bride & Groom
+      </h2>
+    </div>
+    <div class="overflow-x-hidden pb-4">
+      <div class="rahul">
+        <img src="./assets/images/groom.jpg" alt="cowo"
+          class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto" />
+        <h2 class="font-esthetic m-0" style="font-size: 2.5rem" id="groomNameWithInitial"></h2>
+        <p class="mt-3 mb-1" style="font-size: 1rem" id="groomParents">
+        </p>
+      </div>
+
+      <h2 class="font-esthetic my-4 home_txt" style="font-size: 4rem">
+        &amp;
+      </h2>
+
+      <div class="pranjal">
+        <img src="./assets/images/bride2.jpg" alt="cewe"
+          class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto" />
+        <h2 class="font-esthetic m-0" style="font-size: 2.5rem" id="brideNameWithInitial"></h2>
+        <p class="mt-3 mb-1" style="font-size: 1rem" id="brideParents">
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="venueDetails">
+    <div class="text-center">
+      <h2 class="font-esthetic py-2 home_txt" style="font-size: 2rem">
+        Venue Details
+      </h2>
+    </div>
+    <div class="bg-theme-dark mt-4 p-3 shadow rounded-4 text-center home__bottom venueContainer">
+      <div class="py-2">
+        <div class="overflow-x-hidden">
+          <div class="py-2" data-aos="fade-left">
+            <h2 class="font-esthetic m-0 py-2" style="font-size: 1.5rem">
+              Manjal Neerattu Vizha 
+              <br> & <br>
+              Engagement Ceremony
+            </h2>
+            <p style="font-size: 0.95rem">
+
+            </p>
+            <p><i class="fa-regular fa-clock"></i>&nbsp;<span id="weddingTime"></span></p>
+            <p>
+              <i class="fa-solid fa-calendar-days"></i>&nbsp;<span id="weddingDate"></span>
+            </p>
+            <small class="d-block my-1" id="weddingAddress"></small>
+            <iframe
+              id="weddingMap"
+              width="300" height="250" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <br /><a id="weddingMapLink" target="_blank"
+              class="btn btn-outline-light btn-sm rounded-pill shadow mb-2 px-3 mt-3 view-map-btn"><i
+                class="fa-solid fa-map-location-dot me-2"></i>View Google
+              Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="bg-theme-dark mt-4 p-3 shadow rounded-4 text-center home__bottom venueContainer">
+      <div class="py-2">
+        <div class="overflow-x-hidden">
+          <div class="py-2" data-aos="fade-left">
+            <h2 class="font-esthetic m-0 py-2" style="font-size: 2rem">
+              Reception
+            </h2>
+            <p style="font-size: 0.95rem">
+
+            </p>
+            <p><i class="fa-regular fa-clock"></i>&nbsp;<span id="receptionTime"></span></p>
+            <p>
+              <i class="fa-solid fa-calendar-days"></i>&nbsp; <span id="receptionDate"></span>
+            </p>
+            <small class="d-block my-1" id="receptionAddress"></small>
+            <iframe
+              id="receptionMap"
+            width="300" height="250" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <br /><a id="receptionMapLink" target="_blank"
+              class="btn btn-outline-light btn-sm rounded-pill shadow mb-2 px-3 mt-3 view-map-btn"><i
+                class="fa-solid fa-map-location-dot me-2"></i>View Google
+              Maps</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+
+  <div class="bottomSection text-center">
+    <!--=============== time ===============-->
+    <div class="timerContainer">
+      <h3 class="font-esthetic py-4 m-0 home_txt timer-title" style="font-size: 2rem">
+        One Step Closer to Forever
+      </h3>
+      <div style="justify-content: center; display: flex; align-items: center">
+        <div class="rounded-pill shadow py-2 px-4 mt-2 mb-4 timer home_txt">
+          <!-- Ganti waktunya pada data-waktu (sesuai format tersebut) -->
+          <div class="row justify-content-center home__bottom timer" data-time="2026-02-22 14:00:00"  id="count-down">
+            <div class="col-3 p-1">
+              <h2 class="d-inline m-0 p-0" id="day">0</h2>
+              <small class="ms-1 me-0 my-0 p-0 d-inline">Day </small>
+            </div>
+            <div class="col-3 p-1">
+              <h2 class="d-inline m-0 p-0" id="hour">0</h2>
+              <small class="ms-1 me-0 my-0 p-0 d-inline"> hr</small>
+            </div>
+            <div class="col-3 p-1">
+              <h2 class="d-inline m-0 p-0" id="minute">0</h2>
+              <small class="ms-1 me-0 my-0 p-0 d-inline">min</small>
+            </div>
+            <div class="col-3 p-1">
+              <h2 class="d-inline m-0 p-0" id="second">0</h2>
+              <small class="ms-1 me-0 my-0 p-0 d-inline">sec</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-2 home__bottom" data-aos="fade-down" data-aos-duration="1500" style="padding: 20px">
+      <div class="overflow-x-hidden">
+        <div class="py-2" data-aos="fade-left" data-aos-duration="1500">
+          <h4 class="m-0 py-2" style="font-size: 1.5rem; text-align: left">
+            Dear Family & Friends
+          </h4>
+        </div>
+      </div>
+      <p class="d-block my-1" style="text-align: left; text-indent: 5ch">
+       We are delighted to announce our engagement and invite you to celebrate this special milestone with us. Your love and blessings mean the world to us, and your presence will make the occasion truly memorable. 
+       Join us for an evening filled with joy, laughter, and happy moments as we take the first step toward our journey together.
+       We look forward to celebrating this beautiful day with you!
+        <br /><br />
+        With love and excitement,​
+        <br />
+        Mohanraj and Oviya’s Family
+      </p>
+    </div>
+
+    <!--=============== CTA ===============-->
+    <div></div>
+    <p class="CTA">
+      Can't wait to celebrate auspicious moment of our family with you! <br />
+      <span></span>
+    </p>
+    <div style="justify-content: center; display: flex; align-items: center">
+      <div class="gifSection tile__img">
+        <img class="tile__img" src="./assets/template-assets/ggg.gif" alt="" />
+      </div>
+    </div>
+    <p class="footer">
+      Please join us to bless the couple as they begin this beautiful new chapter!
+    </p>
+    <!--=============== happiness ===============-->
+    <div class="happiness">
+      <span class="dance-med">Join us in our happiness!</span>
+      <!-- <div class="socials">
+         <a class="social__links" target="_blank" href=""><i class='bx bx-md bxl-pinterest-alt'></i></a>
+         <a class="social__links" target="_blank" href=""><i class='bx bx-md bxl-twitter'></i></a>
+         <a class="social__links" target="_blank" href=""><i class='bx bx-md bxl-instagram-alt'></i></a>
+      </div> -->
+    </div>
+
+    <!--=============== bottom ===============-->
+    <div class="footer happiness">
+            <a href="https://www.instagram.com/invytale" target="_blank" style="color: #ffffff; text-decoration: none">
+          Powered by
+          <span style="text-decoration: underline; color: #ffffff !important">Invytale</span>
+        </a>
+    </div>
+  </div>
+
+
+  <script>
+    fetch("./client.json")
+      .then(res => res.json())
+      .then(data => {
+
+        document.getElementById("pageTitle").innerText = data.title;
+
+        document.getElementById("groomName").innerText = data.couple.groom.name;
+        document.getElementById("brideName").innerText = data.couple.bride.name;
+        document.getElementById("weddingDateTop").innerText = data.wedding.date;
+
+        document.getElementById("groomNameWithInitial").innerText = data.couple.groom.nameWithInitial;
+        document.getElementById("groomParents").innerText = data.couple.groom.parents;
+
+        document.getElementById("brideNameWithInitial").innerText = data.couple.bride.nameWithInitial;
+        document.getElementById("brideParents").innerText = data.couple.bride.parents;
+
+        document.getElementById("weddingTime").innerText = data.wedding.time;
+        document.getElementById("weddingDate").innerText = data.wedding.date;
+        document.getElementById("weddingAddress").innerText = data.wedding.address;
+        document.getElementById("weddingMap").src = data.wedding.iframeUrl;
+        document.getElementById("weddingMapLink").href = data.wedding.googleMapUrl;
+
+        document.getElementById("receptionTime").innerText = data.reception.time;
+        document.getElementById("receptionDate").innerText = data.reception.date;
+        document.getElementById("receptionAddress").innerText = data.reception.address;
+        document.getElementById("receptionMap").src = data.reception.iframeUrl;
+        document.getElementById("receptionMapLink").href = data.reception.googleMapUrl;
+
+        document.getElementById("count-down").setAttribute("data-time", data.countdownDateTime);
+      });
+  </script>
+
+  <!--=============== javascripts ===============-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit-icons.min.js"></script>
+  <!-- animation js  -->
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+    integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/joiner.js"></script>
+
+
+
+  <!-- <script src="./js/scrollreveal.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/script.js"></script> -->
+
+  <script src="https://assets.invytale.in/invytale-assets/embrald-bliss/js/scrollreveal.min.js"></script>
+  <script src="https://assets.invytale.in/invytale-assets/embrald-bliss/js/main.js"></script>
+  <script src="https://assets.invytale.in/invytale-assets/embrald-bliss/js/script.js"></script>
+</body>
+
+</html>
